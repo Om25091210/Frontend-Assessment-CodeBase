@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://backend-assessment-codebase-639527331571.asia-south1.run.app' 
+  apiUrl: 'https://hotel-reservation-api-639527331571.us-central1.run.app' 
 };
