@@ -20,7 +20,8 @@ export class BookingService {
   constructor(private http: HttpClient) { }
 
   getRooms(): Observable<{ data: Room[] }> {
-    return this.http.get<{ data: Room[] }>(`${this.apiUrl}/rooms`);
+    // Appending a random timestamp to force a fresh fetch every time
+    return this.http.get<{ data: Room[] }>(`${this.apiUrl}/rooms?_t=${Date.now()}`);
   }
 
   bookRooms(numRooms: number): Observable<any> {
