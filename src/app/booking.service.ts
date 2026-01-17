@@ -2,7 +2,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-require('dotenv').config();
 
 export interface Room {
   number: number;
@@ -16,7 +15,7 @@ export interface Room {
 })
 export class BookingService {
   // Ensure this matches your Node backend URL
-  private apiUrl = process.env.BACKEND_URL || 'http://localhost:3000'; 
+  private apiUrl = 'http://localhost:3000'; 
 
   constructor(private http: HttpClient) { }
 
